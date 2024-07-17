@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/typescript-config/base.json",
-  "include": ["."],
+  "extends": "@turbo-with-tailwind/typescript-config/base.json",
+  "include": ["tailwind.config.ts"],
   "exclude": ["dist", "build", "node_modules"]
 }

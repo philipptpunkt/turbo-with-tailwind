@@ -3,7 +3,7 @@ import sharedConfig from "@turbo-with-tailwind/tailwind-config"
 
 const config: Pick<Config, "prefix" | "presets" | "content"> = {
   content: ["./src/**/*.tsx"],
-  prefix: "ui-",
+  prefix: "ds-",
   presets: [sharedConfig],
 }
 

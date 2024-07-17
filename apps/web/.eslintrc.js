@@ -1,3 +1,8 @@
 module.exports = {
-  extends: ["@repo/eslint-config/next.js"],
-};
+  root: true,
+  extends: ["@turbo-with-tailwind/eslint-config/next.js"],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: true,
+  },
+}

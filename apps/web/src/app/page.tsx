@@ -1,14 +1,15 @@
-import Image from "next/image";
-import { Card } from "@repo/ui/card";
+import Image from "next/image"
+import { Card } from "@turbo-with-tailwind/ui/card"
+import { Button } from "@turbo-with-tailwind/design-system/button"
 
 function Gradient({
   conic,
   className,
   small,
 }: {
-  small?: boolean;
-  conic?: boolean;
-  className?: string;
+  small?: boolean
+  conic?: boolean
+  className?: string
 }): JSX.Element {
   return (
     <span
@@ -16,7 +17,7 @@ function Gradient({
         small ? "blur-[32px]" : "blur-[75px]"
       } ${conic ? "bg-glow-conic" : ""} ${className}`}
     />
-  );
+  )
 }
 
 const LINKS = [
@@ -41,16 +42,12 @@ const LINKS = [
     description:
       "Instantly deploy your Turborepo to a shareable URL with Vercel.",
   },
-];
+]
 
 export default function Page(): JSX.Element {
   return (
     <main className="flex flex-col items-center justify-between min-h-screen p-24">
-      <div className="z-10 items-center justify-between w-full max-w-5xl font-mono text-sm lg:flex">
-        <p className="fixed top-0 left-0 flex justify-center w-full px-4 pt-8 pb-6 border-b bg-gradient-to-b backdrop-blur-2xl border-neutral-800 bg-zinc-800/30 from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:bg-zinc-800/30">
-          examples/with-tailwind -&nbsp;
-          <code className="font-mono font-bold">web</code>
-        </p>
+      <div className="z-10 items-center justify-end w-full max-w-5xl font-mono text-sm lg:flex">
         <div className="fixed bottom-0 left-0 flex items-end justify-center w-full h-48 bg-gradient-to-t from-black via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
           <a
             className="flex gap-2 p-8 pointer-events-none place-items-center lg:pointer-events-auto lg:p-0"
@@ -122,6 +119,13 @@ export default function Page(): JSX.Element {
               <path d="M408.46 33.3111H425.677C437.221 33.3111 444.807 27.7699 444.807 17.2152C444.807 6.59453 437.221 1.05332 425.677 1.05332H395.53V48.4175H408.46V33.3111ZM408.46 22.5585V11.8719H424.951C429.569 11.8719 432.076 13.8509 432.076 17.2152C432.076 20.5135 429.569 22.5585 424.951 22.5585H408.46Z" />
               <path d="M476.899 0.261719C460.341 0.261719 448.401 10.6185 448.401 24.7354C448.401 38.8523 460.341 49.2091 476.899 49.2091C493.456 49.2091 505.33 38.8523 505.33 24.7354C505.33 10.6185 493.456 0.261719 476.899 0.261719ZM476.899 11.4761C485.606 11.4761 492.137 16.6215 492.137 24.7354C492.137 32.8493 485.606 37.9947 476.899 37.9947C468.191 37.9947 461.66 32.8493 461.66 24.7354C461.66 16.6215 468.191 11.4761 476.899 11.4761Z" />
             </svg>
+            <p className="font-sans text-lg text-primary-900">
+              with Tailwind CSS
+            </p>
+            <Button
+              href="https://medium.com/@philippbtrentmann/using-tailwind-css-in-a-turborepo-with-apps-and-packages-5a05d2076caf"
+              title="To the Medium article"
+            />
           </div>
         </div>
       </div>
@@ -134,5 +138,5 @@ export default function Page(): JSX.Element {
         ))}
       </div>
     </main>
-  );
+  )
 }

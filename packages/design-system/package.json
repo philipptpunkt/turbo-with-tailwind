@@ -1,5 +1,5 @@
 {
-  "name": "@turbo-with-tailwind/ui",
+  "name": "@turbo-with-tailwind/design-system",
   "version": "0.0.0",
   "sideEffects": [
     "**/*.css"
@@ -9,7 +9,7 @@
   ],
   "exports": {
     "./styles.css": "./dist/index.css",
-    "./card": "./src/card.tsx"
+    "./button": "./src/button.tsx"
   },
   "license": "MIT",
   "scripts": {
